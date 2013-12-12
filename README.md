@@ -19,6 +19,6 @@ Current implementation is extremely simple but functional.  Pull requests welcom
 ### TODO ###
 
 - Tests
-- Improve the UI with CSS/layout
+- Allow reviewers to be removed by clicking "x"
 - Support the "Edit Pull Request" dialog
 - Support more than 1 group

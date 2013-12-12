@@ -1,0 +1,21 @@
+
+
+#stash-groups-ui {
+  position: absolute;
+  top: 7px;
+  right: -52px;
+}
+
+#stash-groups-ui a {
+  cursor: pointer;
+  display: inline-block;
+}
+
+#sg-store {
+  margin-left: 5px;
+  color: #ddd;
+}
+
+#sg-store:hover {
+  color: #707070;
+}

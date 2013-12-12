@@ -6,7 +6,17 @@
       onStore: RW.storeGroups
     });
 
+    // Insert UI onto page
     $('.pull-request-reviewers').append(ui.$el);
+
+    // Manually inject CSS
+    var css = $('<link rel="stylesheet">').attr('href', chrome.extension.getURL('ui.css'));
+    $('head').append(css);
+
+    // Automatically load saved group if present
+    if (RW.hasSavedGroup()) {
+      RW.recallGroups();
+    }
   });
 
   var key = 'stash-group-extension-group-state-';
@@ -23,8 +33,12 @@
     ui._buildUi = function(){
       return $(' \
         <div id="stash-groups-ui"> \
-          <a data-does="recall">Recall Group</a> \
-          <a data-does="store">Store Group</a> \
+          <a id="sg-recall" data-does="recall" title="Load Saved Reviewers"> \
+            <span class="aui-icon aui-icon-small aui-iconfont-user"></span> \
+          </a> \
+          <a id="sg-store" data-does="store" title="Save Current Reviewers"> \
+            <span class="aui-icon aui-icon-small aui-iconfont-configure"></span> \
+          </a> \
         </div>');
     };
 
@@ -41,14 +55,20 @@
 
   /* ---[ RW ]--- */
   var RW = {
-    storeGroups: function($el) {
-      var choices = $('.pull-request-reviewers .select2-choices');
-      // store the outer html
-      var html = $('<div />').append(choices.clone()).html();
-      localStorage.setItem(key+'html', html);
+    hasSavedGroup: function() {
+      return !!localStorage.getItem(key+'val');
+    },
 
-      // store actual "hidden" value
-      localStorage.setItem(key+'val', $('#reviewers').val());
+    storeGroups: function($el) {
+      if (confirm('Save current reviewers?')) {
+        var choices = $('.pull-request-reviewers .select2-choices');
+        // store the outer html
+        var html = $('<div />').append(choices.clone()).html();
+        localStorage.setItem(key+'html', html);
+
+        // store actual "hidden" value
+        localStorage.setItem(key+'val', $('#reviewers').val());
+      }
     },
 
     recallGroups: function($el) {

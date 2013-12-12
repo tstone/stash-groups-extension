@@ -3,9 +3,7 @@
   "name": "Stash Groups",
   "description": "Allows people to be added to pull requests via group",
   "version": "1.0",
-  "permissions": [
-    "https://code.jquery.com/"
-  ],
+  "permissions": [],
   "content_scripts": [
     {
       "all_frames": true,
@@ -18,5 +16,8 @@
         "https://*/*/pull-requests?create*"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    "ui.css"
   ]
 }
