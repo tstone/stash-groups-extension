@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Stash Groups",
+  "description": "Allows people to be added to pull requests via group",
+  "version": "1.0",
+  "permissions": [
+    "https://code.jquery.com/"
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "jquery.js",
+        "stash.js"
+      ],
+      "matches": [
+        "http://*/*/pull-requests?create*",
+        "https://*/*/pull-requests?create*"
+      ]
+    }
+  ]
+}
