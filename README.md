@@ -31,3 +31,4 @@ A simple plugin that allows the user to save a "group" of approvers for a pull r
 - Allow reviewers to be removed by clicking "x"
 - Support the "Edit Pull Request" dialog
 - Support more than 1 group
+- Allow a default branch to be saved as well
