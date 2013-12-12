@@ -3,7 +3,8 @@
 #stash-groups-ui {
   position: absolute;
   top: 7px;
-  right: -52px;
+  left: 511px;
+  min-width: 75px;
 }
 
 #stash-groups-ui a {
@@ -11,11 +12,16 @@
   display: inline-block;
 }
 
-#sg-store {
-  margin-left: 5px;
+#stash-groups-ui .sg-primary {
+  color: #707070 !important;
+  margin-left: -3px;
+}
+
+#stash-groups-ui .sg-secondary {
+  margin-left: 3px;
   color: #ddd;
 }
 
-#sg-store:hover {
+#stash-groups-ui .sg-secondary:hover {
   color: #707070;
 }
