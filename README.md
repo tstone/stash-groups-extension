@@ -7,7 +7,7 @@ Current implementation is extremely simple but functional.  Pull requests welcom
 ### Installation ###
 
 - Clone the git repo
-- Drag the stash.crx file in the /dist directory onto the Chrome extensions window.  It will prompt you to install.
+- Drag the src.crx file in the /dist directory onto the Chrome extensions window.  It will prompt you to install.
 
 ### Building Locally ###
 
