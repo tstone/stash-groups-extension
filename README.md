@@ -18,6 +18,13 @@ A simple plugin that allows the user to save a "group" of approvers for a pull r
 - Check "Developer Mode"
 - Click "Pack Extension" and select the /src folder
 
+### Usage ###
+
+- Start a new pull request
+- Add some reviewers
+- Click the "gear" icon to save them
+- They're now saved.  If you refresh the page they will automatically be added for you.
+
 ### TODO ###
 
 - Tests
