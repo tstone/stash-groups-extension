@@ -2,7 +2,9 @@
 
 A simple plugin that allows the user to save a "group" of approvers for a pull request and recall them at a future point.  The UI is presented on the create pull request screen.
 
-Current implementation is extremely simple but functional.  Pull requests welcome.
+Pull requests welcome.
+
+![screenshot](https://github.com/tstone/stash-groups-extension/raw/master/doc/ss.png)
 
 ### Installation ###
 
