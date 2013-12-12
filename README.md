@@ -4,6 +4,8 @@ A simple plugin that allows the user to save a "group" of approvers for a pull r
 
 Pull requests welcome.
 
+### Preview ###
+
 ![screenshot](https://github.com/tstone/stash-groups-extension/raw/master/doc/ss.png)
 
 ### Installation ###
