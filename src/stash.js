@@ -1,7 +1,6 @@
 ;(function($){
 
   $(function(){
-    console.log("RUNNING");
     var ui = new UI({
       onRecall: RW.recallGroups,
       onStore: RW.storeGroups
